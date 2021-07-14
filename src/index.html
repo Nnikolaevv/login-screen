@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-page-wrapp d-flex">
+      <div class="login-form-wrap d-flex align-items-center">
+        <div class="form-card card ml-auto">
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary btn-registration">Registration</button>
+            <button type="button" class="btn btn-outline-primary btn-sign-in">Sign in</button>
+          </div>
+          <div class="card-body card-registration d-none">
+            <h4 class="card-title">Please Registration</h4>
+            <form name="registrationForm">
+              <div class="form-group">
+                <label for="reg-email">Email address</label>
+                <input
+                        type="email"
+                        class="form-control"
+                        id="reg-email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                        data-required="reg-email"
+                        data-invalid-message="Please provide valid email example@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="reg-password"
+                        placeholder="Password"
+                        data-required="reg-password"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                        type="text"
+                        class="form-control"
+                        id="nick-name"
+                        placeholder="Nick name"
+                        data-required="Nick-name"
+                />
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
+              </div>
+                <div class="row g-3 mt-3 mb-3">
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="inputState" placeholder="Country">
+                  </div>
+                </div>
+
+              <button type="submit" class="btn btn-primary btn-submit-reg">Submit</button>
+            </form>
+          </div>
+          <div class="card-body card-sign-in d-none">
+            <h4 class="card-title">Please Login</h4>
+            <form name="loginForm">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  data-required="email"
+                  data-invalid-message="Please provide valid email example@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  data-required="password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.login-form-wrap -->
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+          <p class="login-greeting-screen-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            inventore non accusantium earum, illo dolores reprehenderit laborum
+            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+            ipsa exercitationem eaque totam. A.
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+    <!-- /.login-page-wrapp -->
+
+  </body>
+</html>
