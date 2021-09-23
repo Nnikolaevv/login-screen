@@ -1,4 +1,4 @@
-export  function  showInputError(el) {
+export function showInputError(el) {
     const parent = el.parentElement;
     const div = parent.querySelector('.invalid-feedback');
     if (div) return;
@@ -18,8 +18,8 @@ export function removeInputError(el) {
     parent.removeChild(err)
 }
 
-    function errorTemplate(msg) {
-        return `
+function errorTemplate(msg) {
+    return `
         <div class="invalid-feedback">${msg}</div>
          `
-    }
+}

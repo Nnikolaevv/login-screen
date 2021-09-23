@@ -1,6 +1,5 @@
 import axios from "../plugins/axios";
 
-
 export async function login(email, password) {
     try {
         const response = await axios.post(
@@ -8,8 +7,7 @@ export async function login(email, password) {
             JSON.stringify({email, password}),
         )
         return response.data
-    }
-    catch (err) {
+    } catch (err) {
         console.log(err)
         return Promise.reject(err)
     }

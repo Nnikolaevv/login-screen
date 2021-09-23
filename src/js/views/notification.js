@@ -1,11 +1,9 @@
-
 function getContainer() {
     return document.querySelector('.notify-container');
 }
 
-
-export function notify ({msg = 'info msg', className = 'alert-info', timeout = 2000} = {}) {
-    if(!getContainer()) {
+export function notify({msg = 'info msg', className = 'alert-info', timeout = 2000} = {}) {
+    if (!getContainer()) {
         createNotifyContainer()
     }
     const index = getAlertIndex()
@@ -49,8 +47,6 @@ export function closeNotify(index) {
         console.warn('Alert not found');
         return
     }
-
     const container = getContainer();
     container.removeChild(alert);
-
 }

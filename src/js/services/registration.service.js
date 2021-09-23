@@ -8,13 +8,14 @@ export async function registration(email, password, ...data) {
     const gender_orientation = data.gender_orientation || 'male';
     const city = data.city || 'Moscow';
     const country = data.country || 'Russia';
-     const date_of_birth_day = data.date_of_birth_day || '01';
+    const date_of_birth_day = data.date_of_birth_day || '01';
     const date_of_birth_month = data.date_of_birth_month || '01';
     const date_of_birth_year = data.date_of_birth_year || '2001';
     try {
         const response = await axios.post(
             `/auth/signup`,
-            JSON.stringify({email,
+            JSON.stringify({
+                email,
                 password,
                 nickname,
                 first_name,
@@ -25,12 +26,12 @@ export async function registration(email, password, ...data) {
                 country,
                 date_of_birth_day,
                 date_of_birth_month,
-                date_of_birth_year}),
+                date_of_birth_year
+            }),
         )
         console.log(response)
         return response
-    }
-    catch (err) {
+    } catch (err) {
         console.log(err)
         return Promise.reject(err)
     }

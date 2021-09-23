@@ -2,17 +2,14 @@ const isTokenKey = "my_app_token"
 
 export default function (axios) {
     axios.interceptors.request.use(setToken)
-   axios.interceptors.response.use(setTokenOnLogin);
-   axios.interceptors.response.use(getClearResponse, onError);
-
-
-
+    axios.interceptors.response.use(setTokenOnLogin);
+    axios.interceptors.response.use(getClearResponse, onError);
 }
 
 function setTokenOnLogin(res) {
-  const isLoginURL = res.config.url.includes('login')
+    const isLoginURL = res.config.url.includes('login')
 
-    if(isLoginURL) {
+    if (isLoginURL) {
         const token = res.data.token;
         localStorage.setItem(isTokenKey, token)
     }
